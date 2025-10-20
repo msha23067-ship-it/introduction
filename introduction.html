@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>自己紹介 — 山田 太郎</title>
+  <meta name="description" content="山田太郎の自己紹介ページ。スキル、経歴、連絡先を掲載しています。">
+  <style>
+    :root{
+      --bg:#f7f8fb; --card:#ffffff; --muted:#6b7280; --accent:#2563eb;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{font-family: Inter, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; margin:0; background:linear-gradient(180deg,#eef2ff 0%,var(--bg) 100%); color:#0f172a}
+    .container{max-width:980px;margin:40px auto;padding:24px}
+    .card{background:var(--card);border-radius:16px;padding:28px;box-shadow:0 8px 30px rgba(16,24,40,0.08);display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:center}
+    .avatar{width:200px;height:200px;border-radius:14px;overflow:hidden;flex-shrink:0;border:6px solid var(--glass);display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e2e8f0,#fff)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:26px}
+    .meta{color:var(--muted);margin-top:6px}
+    .bio{margin-top:12px;line-height:1.7}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .tag{background:#eef2ff;border-radius:999px;padding:6px 10px;font-size:13px;color:var(--accent)}
+
+    .section{margin-top:22px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .skill{background:#fafafa;border-radius:10px;padding:12px}
+    .skill h3{margin:0 0 6px 0;font-size:14px}
+    ul{margin:0;padding-left:18px}
+
+    .contact{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;text-decoration:none;border:1px solid rgba(15,23,42,0.06);background:linear-gradient(180deg,#fff,#f8fafc);color:var(--accent);font-weight:600}
+
+    /* Responsive */
+    @media (max-width:760px){
+      .card{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+      .avatar{width:160px;height:160px;margin:0 auto}
+    }
+
+    /* print-friendly */
+    @media print{body{background:transparent} .card{box-shadow:none} a::after{content:''}}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="card" role="region" aria-labelledby="who">
+      <div style="display:flex;flex-direction:column;align-items:center">
+        <figure class="avatar" aria-hidden="true">
+          <!-- プロフィール画像をここに置いてください -->
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="プロフィール画像">
+        </figure>
+        <div style="margin-top:12px;text-align:center;color:var(--muted);font-size:13px">東京都 / フリーランス</div>
+      </div>
+
+      <div>
+        <header id="who">
+          <h1>山田 太郎 <span style="font-size:14px;color:var(--muted);font-weight:600">(Taro Yamada)</span></h1>
+          <div class="meta">フロントエンドエンジニア・UI/UX デザイナー — JavaScript / React / HTML / CSS</div>
+          <p class="bio">ユーザー中心のインターフェース設計と実装が得意なフロントエンドエンジニアです。使いやすく、メンテナブルなコードを書くことを大切にしています。現在はReactとTypeScriptを中心に、デザインシステムの構築やアクセシビリティ改善に取り組んでいます。</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Figma</span>
+            <span class="tag">アクセシビリティ</span>
+          </div>
+        </header>
+
+        <section class="section" aria-labelledby="skills">
+          <h2 id="skills" style="font-size:16px;margin:0 0 10px 0">スキル</h2>
+          <div class="grid">
+            <div class="skill">
+              <h3>フロントエンド</h3>
+              <ul>
+                <li>React / Next.js / Vite</li>
+                <li>TypeScript / JavaScript (ES6+)</li>
+                <li>HTML5 / CSS3 / TailwindCSS</li>
+              </ul>
+            </div>
+            <div class="skill">
+              <h3>デザイン & ツール</h3>
+              <ul>
+                <li>Figma / Adobe XD</li>
+                <li>デザインシステム設計 / プロトタイピング</li>
+                <li>アクセシビリティ (WCAG)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="exp">
+          <h2 id="exp" style="font-size:16px;margin:0 0 10px 0">職歴・制作</h2>
+          <div style="display:flex;gap:12px;flex-direction:column">
+            <div>
+              <strong>株式会社サンプル — フロントエンドエンジニア</strong>
+              <div style="color:var(--muted);font-size:13px">2020年4月 〜 2023年9月</div>
+              <p style="margin:6px 0">中規模サービスのフロントエンド実装、パフォーマンス改善、CI/CD整備を担当しました。</p>
+            </div>
+            <div>
+              <strong>フリーランス (個人) — UI/UX デザイン / 実装</strong>
+              <div style="color:var(--muted);font-size:13px">2023年10月 〜 現在</div>
+              <p style="margin:6px 0">スタートアップや個人事業主向けに、デザインから実装までをワンストップで提供しています。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="contact">
+          <h2 id="contact" style="font-size:16px;margin:0 0 10px 0">連絡先</h2>
+          <div class="contact">
+            <a class="btn" href="mailto:taro.yamada@example.com">📧 メール</a>
+            <a class="btn" href="#">💼 ポートフォリオ</a>
+            <a class="btn" href="#">🔗 GitHub</a>
+          </div>
+        </section>
+
+        <footer class="section" style="color:var(--muted);font-size:13px">※ このテンプレートは自由に編集して利用できます。プロフィール画像と連絡先は実際の情報に置き換えてください。</footer>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
